@@ -1,3 +1,34 @@
+/* Navigation en haut à gauche */
+.sidebar, nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Logo plus large */
+.logo-container, .hero-logo {
+    width: 100%;
+    max-width: 600px; /* Ajustez selon vos préférences */
+    margin: 0 auto;
+}
+
+.logo-container img, .hero-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Photo de profil carrée */
+.profile-pic, img[alt*="Profil"], .artist-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 0; /* Supprime l'effet arrondi pour un format carré */
+    object-fit: cover;
+}
+
 /* Arrière-plan de la page multicolore et fluide */
 body {
     background: linear-gradient(135deg, #1a0b2e, #121212, #0b222e, #2e1a0b);
