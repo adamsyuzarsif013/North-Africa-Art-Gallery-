@@ -112,10 +112,6 @@ body {
     margin-bottom: 25px;
 }
 
-.logo-container {
-    margin-bottom: 10px;
-}
-
 .gallery-logo {
     max-width: 320px;
     width: 100%;
@@ -123,23 +119,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.6);
     border: 2px solid #c5a059;
-}
-
-/* Mise en page de la biographie avec la photo de profil visible */
-.bio-header-flex {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #feca57;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.7);
 }
 
 section {
@@ -236,9 +215,5 @@ a {
     }
     .gallery-logo {
         max-width: 250px;
-    }
-    .bio-header-flex {
-        flex-direction: column;
-        text-align: center;
     }
 }
