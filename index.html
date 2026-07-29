@@ -4,44 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salim Azarou | Artiste Plasticien & Sculpteur</title>
-    <!-- Fichier CSS principal -->
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Barre de Navigation Latérale (À Gauche) -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <!-- Photo de profil agrandie -->
-            <a href="index.html">
-                <img src="Screenshot_20260224-011704_Photos.jpg" alt="Salim Azarou" class="sidebar-avatar">
-            </a>
-            <!-- Nom de la galerie en haut en gras -->
-            <h2 class="gallery-title">NORTH AFRICAN ART GALLERY</h2>
-        </div>
-
-        <nav class="sidebar-nav">
-            <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
-                <li><a href="oeuvres.html"><i class="fa-solid fa-paintbrush"></i> Œuvres</a></li>
-                <li><a href="#evenements"><i class="fa-solid fa-calendar-days"></i> Événement</a></li>
-                <li><a href="oeuvres.html"><i class="fa-solid fa-images"></i> Galerie</a></li>
-                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-            </ul>
-        </nav>
-
-        <!-- Sélecteur de Traduction Automatique en bas de la sidebar -->
-        <div class="sidebar-translate">
+    <!-- Case 2 : Barre de menu verticale à gauche -->
+    <nav class="vertical-sidebar">
+        <div class="sidebar-brand">NORTH AFRICAN ART GALLERY</div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
+            <li><a href="oeuvres.html"><i class="fa-solid fa-paintbrush"></i> Œuvres</a></li>
+            <li><a href="#evenements"><i class="fa-solid fa-calendar-days"></i> Événement</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        </ul>
+        <div class="sidebar-lang">
             <div id="google_translate_element"></div>
         </div>
-    </aside>
+    </nav>
 
     <!-- Contenu Principal -->
-    <main class="main-content">
+    <main class="main-container">
+        
+        <!-- En-tête avec le nom et la Case 1 (Photo élégante) -->
+        <header class="top-header">
+            <h1 class="gallery-title-top">NORTH AFRICAN ART GALLERY</h1>
+            <div class="profile-card-container">
+                <!-- Case 1 : Photo de profil bien cadrée et élégante -->
+                <div class="artist-photo-box">
+                    <img src="Screenshot_20260224-011704_Photos.jpg" alt="Salim Azarou">
+                </div>
+            </div>
+        </header>
+
         <section id="biographie">
-            <h1>Profil de l'Artiste & Démarche</h1>
+            <h2>Profil de l'Artiste & Démarche</h2>
             <p><strong>Nom de l'artiste :</strong> Salim Azarou</p>
             <p><strong>Région d'ancrage :</strong> Meknès, Maroc</p>
             <p><strong>Profil professionnel :</strong> Artiste plasticien, décorateur, designer et sculpteur.</p>
@@ -74,7 +71,7 @@
         </section>
     </main>
 
-    <!-- Bouton Flottant Q/R en Bas à Droite avec Palette de Peinture -->
+    <!-- Bouton Flottant Palette / Q-R en Bas à Droite -->
     <a href="https://telegram.org/dl" target="_blank" class="telegram-float" title="Questions / Réponses sur Telegram">
         <i class="fa-solid fa-palette"></i>
         <span class="telegram-tooltip">Q/R Direct</span>
