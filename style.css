@@ -5,79 +5,115 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-header {
-    background-color: #1a1a1a;
-    border-bottom: 2px solid #c5a059;
-    padding: 15px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-.artist-avatar img {
-    width: 50px;
-    height: 50px;
+/* Barre Latérale à Gauche */
+.sidebar {
+    width: 280px;
+    background-color: #1a1a1a;
+    border-right: 2px solid #c5a059;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.5);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    text-align: center;
+}
+
+/* Photo de profil plus grande */
+.sidebar-avatar {
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #c5a059;
+    border: 3px solid #c5a059;
+    margin-bottom: 15px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li a {
+/* Nom de la galerie en haut en gras */
+.gallery-title {
     color: #c5a059;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+/* Menu de la barre latérale */
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar-nav ul li a {
+    color: #e0e0e0;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.9em;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #fff;
-}
-
-/* Sélecteur de langues (Haut à droite) */
-.language-selector {
+    font-size: 0.95em;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-nav ul li a i {
     color: #c5a059;
-    font-size: 0.9em;
+}
+
+.sidebar-nav ul li a:hover {
+    background-color: #262626;
+    color: #c5a059;
+}
+
+/* Sélecteur de langues en bas de la sidebar */
+.sidebar-translate {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+}
+
+#google_translate_element select {
+    background-color: #121212;
+    color: #c5a059;
+    border: 1px solid #c5a059;
+    padding: 6px 12px;
+    border-radius: 4px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-.language-selector .lang-btn {
-    color: #888;
-    text-decoration: none;
-    transition: color 0.3s;
+#google_translate_element .goog-te-gadget {
+    color: transparent !important;
 }
 
-.language-selector .lang-btn.active, 
-.language-selector .lang-btn:hover {
-    color: #c5a059;
+#google_translate_element .goog-te-gadget span {
+    display: none;
 }
 
-/* Sections du site */
-main {
+/* Contenu Principal (décalé à droite pour laisser place à la sidebar) */
+.main-content {
+    margin-left: 320px;
     max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
+    padding: 40px 20px;
+    flex: 1;
 }
 
 section {
@@ -98,7 +134,23 @@ a {
     color: #c5a059;
 }
 
-/* Bouton Flottant Telegram / Palette (Bas à droite - Plus grand avec logo palette) */
+.btn-gold {
+    background-color: #c5a059;
+    color: #121212;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.05em;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    display: inline-block;
+}
+
+.btn-gold:hover {
+    background-color: #dfbd75;
+}
+
+/* Bouton Flottant Palette / Q-R en Bas à Droite */
 .telegram-float {
     position: fixed;
     bottom: 30px;
@@ -117,30 +169,7 @@ a {
     transition: transform 0.3s ease, box-shadow 0.3s;
     text-decoration: none;
     border: 2px solid #fff;
-}/* Style du widget de traduction en haut à droite */
-.language-selector, #google_translate_element {
-    display: flex;
-    align-items: center;
 }
-
-#google_translate_element select {
-    background-color: #1a1a1a;
-    color: #c5a059;
-    border: 1px solid #c5a059;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-#google_translate_element .goog-te-gadget {
-    color: transparent !important;
-}
-
-#google_translate_element .goog-te-gadget span {
-    display: none;
-}
-
 
 .telegram-float:hover {
     transform: scale(1.12);
@@ -165,4 +194,21 @@ a {
 
 .telegram-float:hover .telegram-tooltip {
     opacity: 1;
+}
+
+/* Adaptation sur petits écrans (Téléphones portables) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: none;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 20px 10px;
+    }
 }
