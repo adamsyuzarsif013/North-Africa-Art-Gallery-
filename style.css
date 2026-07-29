@@ -112,21 +112,22 @@ body {
     margin-bottom: 35px;
 }
 
-/* Titre de la galerie grand, centré, aux lettres multicolores */
-.gallery-title-rainbow {
-    font-size: 2.2em;
-    font-family: 'Georgia', serif;
-    font-weight: bold;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-    background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff, #1dd1a1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+/* Style et taille du Logo en haut */
+.logo-container {
+    margin-bottom: 25px;
 }
 
-/* TAILLE FORCÉE DE LA PHOTO DE PROFIL (pour qu'elle ne soit plus géante) */
-.profile-photo-container img {
+.gallery-logo {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+    border: 2px solid #c5a059;
+}
+
+/* TAILLE STRICTE DE LA PHOTO DE PROFIL (pour qu'elle reste petite) */
+.profile-img {
     width: 130px !important;
     height: 130px !important;
     max-width: 130px !important;
@@ -230,7 +231,7 @@ a {
         margin-left: 0;
         padding: 20px 10px;
     }
-    .gallery-title-rainbow {
-        font-size: 1.6em;
+    .gallery-logo {
+        max-width: 250px;
     }
 }
