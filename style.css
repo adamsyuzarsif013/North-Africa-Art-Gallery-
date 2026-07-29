@@ -35,18 +35,19 @@ body {
     letter-spacing: 1px;
 }
 
-/* Photo de profil dans la barre de gauche */
+/* Photo de profil bien cadrée à gauche sous le nom */
 .sidebar-profile-photo {
     text-align: center;
     margin-bottom: 25px;
 }
 
 .sidebar-profile-photo img {
-    width: 85px;
-    height: 85px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #c5a059;
+    display: inline-block;
 }
 
 .sidebar-menu {
@@ -113,18 +114,19 @@ body {
     padding: 40px 20px;
 }
 
-/* Logo en haut au milieu */
+/* Logo en haut au milieu (taille bien contrôlée) */
 .top-logo-header {
     text-align: center;
     margin-bottom: 30px;
 }
 
 .main-logo-img {
-    max-width: 320px;
+    max-width: 280px;
     width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    display: inline-block;
 }
 
 section {
