@@ -1,40 +1,130 @@
-/* 1. Navigation en haut à gauche */
-nav, .sidebar {
+/* --- 1. Arrière-plan et corps de page --- */
+body {
+    background-color: #0a192f; /* Bleu très foncé (marine) */
+    color: #e0e0e0; /* Texte gris clair pour la lisibilité */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Supprime le dégradé multicolore et l'animation */
+    background-image: none;
+    animation: none;
+}
+
+/* --- 2. Navigation en haut à gauche --- */
+/* On force le menu à rester en haut à gauche, par-dessus le contenu si nécessaire */
+.sidebar, nav {
     position: absolute !important;
-    top: 20px !important;
+    top: 80px !important; /* Ajustez selon la hauteur de votre barre d'adresse */
     left: 20px !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 10px !important;
-    z-index: 1000;
+    gap: 15px !important;
+    z-index: 1000; /* Pour être au-dessus du logo et du contenu */
+    width: auto !important;
+    background-color: transparent !important;
 }
 
-/* 2. Logo plus large */
-img[src*="logo"], header img, .logo img {
+/* Style des liens du menu (couleur or/jaune comme dans l'image) */
+.sidebar a, nav a {
+    color: #c4a77d !important; /* Couleur or */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-left: 3px solid transparent;
+}
+
+/* Effet au survol des liens */
+.sidebar a:hover, nav a:hover {
+    color: #ffffff !important;
+    border-left: 3px solid #c4a77d;
+}
+
+/* Titre de la galerie dans la sidebar */
+.sidebar h1, nav .logo-text {
+    color: #e0e0e0 !important;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* --- 3. Logo plus grand et centré --- */
+/* Cible le conteneur du logo dans la zone principale */
+.main-content .logo-container, .hero-section .logo-container {
     width: 100% !important;
-    max-width: 600px !important;
-    height: auto !important;
+    max-width: 700px !important; /* Plus large */
+    margin: 0 auto !important; /* Centré horizontalement */
+    padding-top: 20px !important;
+    text-align: center;
     display: block !important;
-    margin: 0 auto !important;
+    background-color: transparent !important;
 }
 
-/* 3. Photo de profil carrée */
-img[alt*="Profil"], img[src*="profil"], .profile img {
-    width: 150px !important;
-    height: 150px !important;
-    border-radius: 0 !important;
-    object-fit: cover !important;
+/* Force l'image du logo à remplir son conteneur */
+.main-content .logo-container img, .hero-section .logo-container img {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
 }
 
-/* 4. Arrière-plan multicolore */
-body {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7, #7f7fd5) !important;
-    background-size: 400% 400% !important;
-    animation: gradientAnimation 15s ease infinite !important;
+/* --- 4. Photo de profil carrée --- */
+/* Cible l'image de profil dans la carte 'Profil de l'Artiste' */
+.profile-pic, .artist-photo, img.rounded-circle {
+    width: 180px !important; /* Taille de l'image */
+    height: 180px !important; /* Taille de l'image */
+    border-radius: 0 !important; /* Supprime l'effet arrondi pour un carré parfait */
+    object-fit: cover;
+    border: 2px solid #c4a77d; /* Bordure or facultative */
 }
 
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* --- 5. Style des cartes (blocs de texte) --- */
+/* Fond sombre pour les blocs de texte pour contraster avec le fond de page */
+.card, .content-block {
+    background-color: #112240; /* Un bleu légèrement plus clair que le body */
+    border: 1px solid #1c3a5e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Titres des sections (ex: Profil, Événements) */
+h2.section-title {
+    color: #e0e0e0;
+    border-bottom: 2px solid #c4a77d;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* --- 6. Liens et Boutons --- */
+/* Couleur des liens dans le texte */
+a {
+    color: #86a8e7; /* Un bleu clair pour les liens hypertextes */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Bouton 'Découvrir mes œuvres' */
+.btn-primary, .cta-button {
+    background-color: #c4a77d; /* Couleur or */
+    color: #0a192f;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #e0c39e;
+}
+
+/* --- 7. Pied de page (Palette) --- */
+/* S'assurer que le bouton palette est présent */
+.footer-palette {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
 }
