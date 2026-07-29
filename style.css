@@ -106,15 +106,14 @@ body {
     padding: 40px 20px;
 }
 
-/* En-tête */
+/* En-tête Logo */
 .top-profile-header {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
-/* Style et taille du Logo en haut */
 .logo-container {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 .gallery-logo {
@@ -126,17 +125,21 @@ body {
     border: 2px solid #c5a059;
 }
 
-/* TAILLE STRICTE DE LA PHOTO DE PROFIL (pour qu'elle reste petite) */
+/* Mise en page de la biographie avec la photo de profil visible */
+.bio-header-flex {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .profile-img {
-    width: 130px !important;
-    height: 130px !important;
-    max-width: 130px !important;
-    max-height: 130px !important;
-    border-radius: 50% !important;
-    object-fit: cover !important;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
     border: 3px solid #feca57;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.7);
-    display: inline-block !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.7);
 }
 
 section {
@@ -233,5 +236,9 @@ a {
     }
     .gallery-logo {
         max-width: 250px;
+    }
+    .bio-header-flex {
+        flex-direction: column;
+        text-align: center;
     }
 }
