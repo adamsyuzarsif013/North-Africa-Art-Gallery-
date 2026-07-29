@@ -1,33 +1,53 @@
 /* --- DESIGN GÉNÉRAL DE LA GALERIE --- */
 body {
-    background-color: #121212; /* Fond sombre et élégant pour mettre en valeur l'art */
-    color: #e0e0e0; /* Texte gris clair très lisible */
+    background-color: #121212;
+    color: #e0e0e0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    l-height: 1.6;
 }
 
-/* --- BARRE DE NAVIGATION SUPÉRIEURE (NOIRE & CHIC) --- */
+/* --- BARRE DE NAVIGATION & PHOTO DE PROFIL --- */
 header {
     background-color: #000000;
-    border-bottom: 2px solid #c5a059; /* Liseré doré élégant */
+    border-bottom: 2px solid #c5a059;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.artist-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #c5a059;
+    transition: transform 0.3s ease;
+}
+
+.artist-avatar img:hover {
+    transform: scale(1.05);
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     margin: 0;
-    padding: 15px 0;
+    padding: 0;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin-left: 25px;
 }
 
 nav ul li a {
@@ -40,7 +60,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #c5a059; /* Effet doré au survol */
+    color: #c5a059;
 }
 
 /* --- CONTENU PRINCIPAL --- */
@@ -56,7 +76,7 @@ section {
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    border-left: 4px solid #c5a059; /* Touche artistique dorée à gauche */
+    border-left: 4px solid #c5a059;
 }
 
 h1, h2, h3 {
