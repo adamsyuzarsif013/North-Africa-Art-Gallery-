@@ -117,7 +117,30 @@ a {
     transition: transform 0.3s ease, box-shadow 0.3s;
     text-decoration: none;
     border: 2px solid #fff;
+}/* Style du widget de traduction en haut à droite */
+.language-selector, #google_translate_element {
+    display: flex;
+    align-items: center;
 }
+
+#google_translate_element select {
+    background-color: #1a1a1a;
+    color: #c5a059;
+    border: 1px solid #c5a059;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#google_translate_element .goog-te-gadget {
+    color: transparent !important;
+}
+
+#google_translate_element .goog-te-gadget span {
+    display: none;
+}
+
 
 .telegram-float:hover {
     transform: scale(1.12);
