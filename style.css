@@ -11,7 +11,7 @@
 /* Logo plus large */
 .logo-container, .hero-logo {
     width: 100%;
-    max-width: 600px; /* Ajustez selon vos préférences */
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -25,226 +25,19 @@
 .profile-pic, img[alt*="Profil"], .artist-photo {
     width: 150px;
     height: 150px;
-    border-radius: 0; /* Supprime l'effet arrondi pour un format carré */
+    border-radius: 0;
     object-fit: cover;
 }
 
-/* Arrière-plan de la page multicolore et fluide */
+/* Arrière-plan de la page multicolore */
 body {
-    background: linear-gradient(135deg, #1a0b2e, #121212, #0b222e, #2e1a0b);
+    background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7, #7f7fd5);
     background-size: 400% 400%;
-    animation: gradientBackground 15s ease infinite;
-    color: #e0e0e0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
+    animation: gradientAnimation 15s ease infinite;
 }
 
-@keyframes gradientBackground {
+@keyframes gradientAnimation {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-}
-
-/* Barre de menu verticale à gauche */
-.vertical-sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 220px;
-    height: 100vh;
-    background-color: rgba(22, 22, 22, 0.95);
-    border-right: 2px solid #c5a059;
-    padding: 20px 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 1000;
-    box-shadow: 4px 0 15px rgba(0,0,0,0.5);
-}
-
-.sidebar-brand {
-    color: #c5a059;
-    font-size: 0.9em;
-    font-weight: bold;
-    font-family: 'Georgia', serif;
-    text-align: center;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-}
-
-.sidebar-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar-menu li {
-    margin-bottom: 15px;
-}
-
-.sidebar-menu li a {
-    color: #e0e0e0;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9em;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
-}
-
-.sidebar-menu li a i {
-    color: #c5a059;
-}
-
-.sidebar-menu li a:hover {
-    background-color: #222;
-    color: #c5a059;
-}
-
-.sidebar-lang {
-    text-align: center;
-    padding-top: 15px;
-    border-top: 1px solid #333;
-}
-
-#google_translate_element select {
-    background-color: #121212;
-    color: #c5a059;
-    border: 1px solid #c5a059;
-    padding: 5px;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
-    width: 100%;
-}
-
-#google_translate_element .goog-te-gadget {
-    color: transparent !important;
-}
-
-#google_translate_element .goog-te-gadget span {
-    display: none;
-}
-
-/* Contenu Principal */
-.main-container {
-    margin-left: 250px;
-    max-width: 850px;
-    padding: 40px 20px;
-}
-
-/* En-tête Logo */
-.top-profile-header {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.gallery-logo {
-    max-width: 320px;
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.6);
-    border: 2px solid #c5a059;
-}
-
-section {
-    background-color: rgba(26, 26, 26, 0.9);
-    border: 1px solid #c5a059;
-    border-radius: 8px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-}
-
-h1, h2, h3 {
-    color: #c5a059;
-    font-family: 'Georgia', serif;
-}
-
-a {
-    color: #c5a059;
-}
-
-.btn-gold {
-    background-color: #c5a059;
-    color: #121212;
-    padding: 12px 25px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    font-size: 1.05em;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    display: inline-block;
-}
-
-.btn-gold:hover {
-    background-color: #dfbd75;
-}
-
-/* Bouton Flottant en Bas à Droite */
-.telegram-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: linear-gradient(135deg, #c5a059, #8c6d33);
-    color: #121212;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    box-shadow: 0 6px 20px rgba(197, 160, 89, 0.4);
-    z-index: 9999;
-    transition: transform 0.3s ease, box-shadow 0.3s;
-    text-decoration: none;
-    border: 2px solid #fff;
-}
-
-.telegram-float:hover {
-    transform: scale(1.12);
-    box-shadow: 0 8px 25px rgba(197, 160, 89, 0.7);
-}
-
-.telegram-tooltip {
-    position: absolute;
-    right: 85px;
-    background-color: #1a1a1a;
-    color: #c5a059;
-    border: 1px solid #c5a059;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 0.85em;
-    font-weight: bold;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-}
-
-.telegram-float:hover .telegram-tooltip {
-    opacity: 1;
-}
-
-/* Sur les téléphones portables */
-@media (max-width: 768px) {
-    .vertical-sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        box-shadow: none;
-    }
-    .main-container {
-        margin-left: 0;
-        padding: 20px 10px;
-    }
-    .gallery-logo {
-        max-width: 250px;
-    }
 }
