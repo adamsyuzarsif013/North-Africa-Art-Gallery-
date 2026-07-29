@@ -1,39 +1,36 @@
-/* Navigation en haut à gauche */
-.sidebar, nav {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* 1. Navigation en haut à gauche */
+nav, .sidebar {
+    position: absolute !important;
+    top: 20px !important;
+    left: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    z-index: 1000;
 }
 
-/* Logo plus large */
-.logo-container, .hero-logo {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+/* 2. Logo plus large */
+img[src*="logo"], header img, .logo img {
+    width: 100% !important;
+    max-width: 600px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
 }
 
-.logo-container img, .hero-logo img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+/* 3. Photo de profil carrée */
+img[alt*="Profil"], img[src*="profil"], .profile img {
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 0 !important;
+    object-fit: cover !important;
 }
 
-/* Photo de profil carrée */
-.profile-pic, img[alt*="Profil"], .artist-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 0;
-    object-fit: cover;
-}
-
-/* Arrière-plan de la page multicolore */
+/* 4. Arrière-plan multicolore */
 body {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7, #7f7fd5);
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7, #7f7fd5) !important;
+    background-size: 400% 400% !important;
+    animation: gradientAnimation 15s ease infinite !important;
 }
 
 @keyframes gradientAnimation {
