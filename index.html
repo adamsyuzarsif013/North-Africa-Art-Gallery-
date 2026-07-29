@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +9,37 @@
     <!-- FontAwesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<body>
 
-
-    <!-- Le Menu de Navigation -->
-    <header>
-        <div class="header-container">
-            <div class="artist-avatar">
-                <a href="index.html">
-                    <img src="Screenshot_20260224-011704_Photos.jpg" alt="Salim Azarou">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">ACCUEIL</a></li>
-                    <li><a href="oeuvres.html">ŒUVRES</a></li>
-                    <li><a href="#biographie">PROFIL</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-            </nav>
-            <!-- Sélecteur de Langues en Haut à Droite -->
-                        <!-- Sélecteur de Langues Automatique (Google Traduction) -->
-            <div id="google_translate_element"></div>
-
-            </div>
+    <!-- Barre de Navigation Latérale (À Gauche) -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <!-- Photo de profil agrandie -->
+            <a href="index.html">
+                <img src="Screenshot_20260224-011704_Photos.jpg" alt="Salim Azarou" class="sidebar-avatar">
+            </a>
+            <!-- Nom de la galerie en haut en gras -->
+            <h2 class="gallery-title">NORTH AFRICAN ART GALLERY</h2>
         </div>
-    </header>
 
-    <!-- La Section Principale -->
-    <main>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
+                <li><a href="oeuvres.html"><i class="fa-solid fa-paintbrush"></i> Œuvres</a></li>
+                <li><a href="#evenements"><i class="fa-solid fa-calendar-days"></i> Événement</a></li>
+                <li><a href="oeuvres.html"><i class="fa-solid fa-images"></i> Galerie</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sélecteur de Traduction Automatique en bas de la sidebar -->
+        <div class="sidebar-translate">
+            <div id="google_translate_element"></div>
+        </div>
+    </aside>
+
+    <!-- Contenu Principal -->
+    <main class="main-content">
         <section id="biographie">
             <h1>Profil de l'Artiste & Démarche</h1>
             <p><strong>Nom de l'artiste :</strong> Salim Azarou</p>
@@ -44,25 +49,28 @@
             
             <p>Avec plus de 20 ans d'expérience, Salim Azarou explore la matière, le relief et la mémoire à travers une démarche unique qui fusionne l'art contemporain et la préservation du patrimoine d'Afrique du Nord. En travaillant des matériaux bruts, de la terre aux enduits précieux, il donne vie à des créations murales, sculpturales et picturales qui s'intègrent aussi bien dans des intérieurs modernes que traditionnels.</p>
             
-            <!-- Bouton pour accéder aux œuvres -->
-            <div style="text-align: center; margin: 40px 0;">
-                <a href="oeuvres.html" style="background-color: #c5a059; color: #111; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 1.1em; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">Découvrir toutes mes Œuvres</a>
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="oeuvres.html" class="btn-gold">Découvrir toutes mes Œuvres</a>
             </div>
+        </section>
+
+        <section id="evenements">
+            <h2>Événements & Actualités</h2>
+            <p>Retrouvez ici les dernières expositions, l'ouverture de notre nouvelle boutique et les présentations des nouvelles collections d'art de Salim Azarou.</p>
         </section>
 
         <section id="synthese">
             <h2>Synthèse Artistique</h2>
-            <p>L'œuvre de Salim Azarou brille par sa pluralité technique et thématique. En naviguant habilement entre le modelage sculptural de la terre (pisé), la délicatesse des bas-reliefs dorés et la force des portraits picturaux, l'artiste s'impose comme un passeur de mémoire. Son travail ne se contente pas d'être visuel : il invite au toucher, rend hommage à l'architecture historique de Meknès et de l'Afrique du Nord, et réinvente l'art décoratif contemporain.</p>
+            <p>L'œuvre de Salim Azarou brille par sa pluralité technique et thématique. En naviguant habilement entre le modelage sculptural de la terre (pisé), la délicatesse des bas-reliefs dorés et la force des portraits picturaux, l'artiste s'impose comme un passeur de mémoire.</p>
         </section>
 
-        <!-- Section Contact -->
-                <section id="contact">
+        <section id="contact">
             <h2>Contact & Réseaux Sociaux</h2>
-            <p>Pour toute commande, acquisition d'œuvre ou collaboration artistique, vous pouvez me contacter directement :</p>
-            <p><strong>Email :</strong> <a href="mailto:Slm.azarou.369@gmail.com" style="color: #c5a059;">Slm.azarou.369@gmail.com</a></p>
-            <p><strong>WhatsApp :</strong> <a href="https://wa.me/212680506539" target="_blank" style="color: #c5a059;">+212 6 80 50 65 39</a></p>
-            <p><strong>Instagram :</strong> <a href="https://www.instagram.com/north_african_art_gallery?igsh=MWZuMmRwcTVtdHl6aA==" target="_blank" style="color: #c5a059;">Visiter mon Instagram</a></p>
-            <p><strong>Facebook :</strong> <a href="https://www.facebook.com/share/192NMe3BD4/" target="_blank" style="color: #c5a059;">Visiter ma page Facebook</a></p>
+            <p>Pour toute commande, acquisition d'œuvre ou collaboration artistique :</p>
+            <p><strong>Email :</strong> <a href="mailto:Slm.azarou.369@gmail.com">Slm.azarou.369@gmail.com</a></p>
+            <p><strong>WhatsApp :</strong> <a href="https://wa.me/212680506539" target="_blank">+212 6 80 50 65 39</a></p>
+            <p><strong>Instagram :</strong> <a href="https://www.instagram.com/north_african_art_gallery?igsh=MWZuMmRwcTVtdHl6aA==" target="_blank">Visiter mon Instagram</a></p>
+            <p><strong>Facebook :</strong> <a href="https://www.facebook.com/share/192NMe3BD4/" target="_blank">Visiter ma page Facebook</a></p>
         </section>
     </main>
 
@@ -72,8 +80,6 @@
         <span class="telegram-tooltip">Q/R Direct</span>
     </a>
 
-</body>
-</html>
     <!-- Script de Traduction Automatique -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
@@ -85,3 +91,6 @@
         }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
