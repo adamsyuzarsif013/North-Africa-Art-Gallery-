@@ -1,10 +1,18 @@
-/* Style général de base */
+/* Style général de base avec arrière-plan multicolore artistique */
 body {
-    background-color: #121212;
+    background: linear-gradient(135deg, #1a0b2e, #121212, #0b222e, #2e1a0b);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
     color: #e0e0e0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Barre de menu verticale à gauche */
@@ -14,7 +22,7 @@ body {
     left: 0;
     width: 220px;
     height: 100vh;
-    background-color: #161616;
+    background-color: rgba(22, 22, 22, 0.95);
     border-right: 2px solid #c5a059;
     padding: 20px 15px;
     display: flex;
@@ -98,31 +106,36 @@ body {
     padding: 40px 20px;
 }
 
-/* En-tête avec titre et photo de profil centrés */
+/* En-tête avec titre multicolore et photo */
 .top-profile-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
-.gallery-title-top {
-    color: #c5a059;
-    font-size: 1.5em;
+/* Titre grand, centré, aux lettres multicolores (dégradé artistique) */
+.gallery-title-rainbow {
+    font-size: 2.2em;
     font-family: 'Georgia', serif;
+    font-weight: bold;
     margin-bottom: 20px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff, #1dd1a1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .profile-photo-container img {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #c5a059;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    border: 3px solid #feca57;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.7);
 }
 
 section {
-    background-color: #1a1a1a;
+    background-color: rgba(26, 26, 26, 0.9);
     border: 1px solid #c5a059;
     border-radius: 8px;
     padding: 30px;
@@ -212,5 +225,8 @@ a {
     .main-container {
         margin-left: 0;
         padding: 20px 10px;
+    }
+    .gallery-title-rainbow {
+        font-size: 1.6em;
     }
 }
