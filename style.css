@@ -1,39 +1,124 @@
-/* Style général du site */
+/* --- DESIGN GÉNÉRAL DE LA GALERIE --- */
 body {
+    background-color: #121212; /* Fond sombre et élégant pour mettre en valeur l'art */
+    color: #e0e0e0; /* Texte gris clair très lisible */
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fdfdfd; 
-    color: #333333;
+    line-height: 1.6;
 }
 
-/* Le menu de navigation */
+/* --- BARRE DE NAVIGATION SUPÉRIEURE (NOIRE & CHIC) --- */
 header {
-    background-color: #ffffff;
-    padding: 30px 0;
-    text-align: center;
-    border-bottom: 1px solid #eeeeee;
+    background-color: #000000;
+    border-bottom: 2px solid #c5a059; /* Liseré doré élégant */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 0;
-    padding: 0;
+    padding: 15px 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 nav ul li a {
+    color: #ffffff;
     text-decoration: none;
-    color: #000000;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: bold;
     letter-spacing: 2px;
+    transition: color 0.3s ease;
 }
 
-/* La section principale */
+nav ul li a:hover {
+    color: #c5a059; /* Effet doré au survol */
+}
+
+/* --- CONTENU PRINCIPAL --- */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #1e1e1e;
+    margin-bottom: 40px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-left: 4px solid #c5a059; /* Touche artistique dorée à gauche */
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+    font-family: 'Georgia', serif;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #c5a059;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #c5a059;
+    margin-top: 25px;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #cccccc;
+}
+
+/* --- TABLEAUX DES ŒUVRES --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #252525;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #333333;
+}
+
+th {
+    background-color: #2a2a2a;
+    color: #c5a059;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+td {
+    color: #dddddd;
+    font-size: 0.95rem;
+}
+
+tr:hover {
+    background-color: #2e2e2e;
+}
 #hero {
     text-align: center;
     padding: 60px 20px;
