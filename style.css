@@ -1,0 +1,60 @@
+/* Style général du site */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfdfd; 
+    color: #333333;
+}
+
+/* Le menu de navigation */
+header {
+    background-color: #ffffff;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+/* La section principale */
+#hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#hero img {
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Ajoute une très légère ombre sous l'image */
+}
+
+#hero h1 {
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+#hero p {
+    font-size: 16px;
+    font-style: italic;
+    color: #777777;
+}
